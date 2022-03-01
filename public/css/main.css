@@ -1,0 +1,33 @@
+.trix-button-group--file-tools {
+    display: none !important;
+}
+
+/* navbar */
+.navbar {
+    background-color: #65abfc;
+}
+
+/* navbar-index */
+.navbar-index {
+    background-color: #ffe137;
+}
+
+/* navbar-admin */
+.navbar-admin {
+    background-color: #ffaa4c;
+}
+
+/* card-header */
+.card-header {
+    background-color: #fd8e5b;
+}
+
+/* card-body */
+.card-body {
+    background-color: #fff2e6;
+}
+
+/* footer
+.footer {
+    background-color: ;
+} */
