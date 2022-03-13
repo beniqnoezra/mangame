@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\MangaController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +17,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [MangaController::class, 'index'])->name('index');
+Route::prefix('manga')->group(function () {
+    Route::get('/', [MangaController::class, 'index'])->name('manga');
+});
 Route::get('/contact', function () {
     $title = 'Contact';
     return view('public.contact', compact('title'));
@@ -50,4 +53,4 @@ Route::middleware('auth')->group(function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [AdminController::class, 'home'])->name('home');

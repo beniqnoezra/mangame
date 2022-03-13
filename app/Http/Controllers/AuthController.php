@@ -21,7 +21,7 @@ class AuthController extends Controller
                 return redirect()->route('admin.index');
             }
 
-            return redirect()->route('index');
+            return redirect()->route('manga');
         }
     }
 

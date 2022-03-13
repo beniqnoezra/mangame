@@ -28,7 +28,7 @@
                                         <td class="align-middle my-3 py-3">
                                             <img src="{{ asset('storage/' . $manga->image) }}" alt="" style="width: 70px">
                                         </td>
-                                        <td class="align-middle">{{ $manga->judul }}</td>
+                                        <td class="align-middle fw-bold">{{ $manga->judul }}</td>
                                         <td class="align-middle">
                                             <a href="{{ route('manga.show', $manga->id) }}" class="btn btn-success"><i class="bi bi-card-text"></i> Detail</a>
                                         </td>
@@ -38,6 +38,9 @@
                         </table>
                     </div>
                 </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                {{ $mangas->links() }}
             </div>
         </div>
     </section>

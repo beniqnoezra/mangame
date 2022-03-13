@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
         <!-- Trix Editor -->
-        <link rel="stylesheet" type="text/css" href="/css/trix.css">
-        <script type="text/javascript" src="/js/trix.js"></script>
+        <link rel="stylesheet" type="text/css" href="{{asset('css/trix.css')}}">
+        <script type="text/javascript" src="{{asset('js/trix.js')}}" defer></script>
 
         <style>
             trix-toolbar [data-trix-button-grup="file-tools"]{
@@ -30,12 +30,12 @@
         <!-- Icon Title -->
         <link rel="shortcut icon" href="{{ asset('img/icon.jpg') }}">
 
-        <title>MangaME | {{ $title }}</title>
+        <title>MangaME | {{ $title }} </title>
     </head>
-    <body>
+    <body style="background-color: aliceblue">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
-                <a href="{{ route('index') }}" class="navbar-brand"><img src="{{ asset('img/logo.jpg') }}" width="140px" alt=""></a>
+                <a href="{{ route('home') }}" class="navbar-brand"><img src="{{ asset('img/logo.jpg') }}" width="140px" alt=""></a>
 
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
                     <span class="navbar-toggler-icon"></span>
@@ -44,13 +44,13 @@
                 <div class="collapse navbar-collapse" id="menu">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a href="{{ route('index') }}" class="nav-link fw-bold">Home</a>
+                            <a href="{{ route('home') }}" class="nav-link fw-bold"><i class="bi bi-house-door-fill"></i> Home</a>
                         </li>
-                        <li class="nav-item mr-3">
-                            <a href="{{ route('contact') }}" class="nav-link fw-bold">Contact</a>
+                        <li class="nav-item">
+                            <a href="{{ route('contact') }}" class="nav-link fw-bold"><i class="bi bi-file-person"></i> Contact</a>
                         </li>
-                        <li class="nav-item mr-3">
-                            <a href="{{ route('index') }}" class="nav-link fw-bold">Manga</a>
+                        <li class="nav-item">
+                            <a href="{{ route('manga') }}" class="nav-link fw-bold"><i class="bi bi-bar-chart-steps"></i> Manga</a>
                         </li>
                     </ul>
                     
@@ -76,13 +76,13 @@
             <div class="container">
                 <footer class="footer">
                     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                    <li class="nav-item"><a href="{{ route('index') }}" class="nav-link px-2 text-muted">Home</a></li>
+                    <li class="nav-item"><a href="{{ route('home') }}" class="nav-link px-2 text-muted">Home</a></li>
                     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
                     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
                     <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link px-2 text-muted">FAQs</a></li>
                     <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link px-2 text-muted">About</a></li>
                     <li class="nav-item"><a href="{{ route('contact') }}" class="nav-link px-2 text-muted">Contact</a></li>
-                    <li class="nav-item"><a href="{{ route('index') }}" class="nav-link px-2 text-muted">Manga</a></li>
+                    <li class="nav-item"><a href="{{ route('manga') }}" class="nav-link px-2 text-muted">Manga</a></li>
                     </ul>
                     <div class="d-flex justify-content-between">
                         <p>&copy; 2022 Company, Inc. All rights reserved.</p>

@@ -40,7 +40,7 @@
                     <div class="input-group table-hover mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default">Ringkasan</span>
                         <input id="ringkasan" type="hidden" name="ringkasan" value="{{ $manga->ringkasan }}">
-                        <trix-editor input="ringkasan"></trix-editor>
+                        <trix-editor input="ringkasan" style="background-color: #ffffff"></trix-editor>
                     </div>
 
                     {{-- <p class="fw-bold w-75">Catatan: <span class="fw-normal">Form yang anda isi akan diperiksa oleh admin terlebih dahulu, apabila tidak sesuai dengan syarat dan ketentuan maka form ini akan dikembalikan. Terimakasih...😊</span></p> --}}

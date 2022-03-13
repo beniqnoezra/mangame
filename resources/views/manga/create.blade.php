@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 mt-5">
-                <a href="{{ route('index') }}" class="btn btn-secondary"><i class="bi bi-backspace"></i> Kembali</a>
+                <a href="{{ route('manga') }}" class="btn btn-secondary"><i class="bi bi-backspace"></i> Kembali</a>
             </div>
             <div class="col-12 mt-3">
                 <h4>Form Tambah Manga</h4>
@@ -44,9 +44,9 @@
                         <textarea name="ringkasan" id="" cols="100" rows="5"></textarea>
                     </div>
 
-                    <p class="fw-bold w-75">Catatan: <span class="fw-normal">Form yang anda isi akan diperiksa oleh admin terlebih dahulu, apabila tidak sesuai dengan syarat dan ketentuan maka form ini akan dikembalikan. Terimakasih...😊</span></p>
+                    <p class="fw-bold w-75">Catatan : <span class="fw-normal">Form yang anda isi akan diperiksa oleh admin  sesuai persyaratan dan ketentuan. Terimakasih...😊</span></p>
 
-                    <button class="btn btn-primary mb-3"><i class="bi bi-send-plus"></i> Kirim</button>
+                    <button class="btn btn-primary mb-3" type="submit"><i class="bi bi-send-plus"></i> Kirim</button>
                 </form>
             </div>
         </div>

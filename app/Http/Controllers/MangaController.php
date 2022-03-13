@@ -15,8 +15,8 @@ class MangaController extends Controller
      */
     public function index()
     {
-        $title = 'Home';
-        $mangas = Manga::latest()->where('enabled', true)->get();
+        $title = 'Manga';
+        $mangas = Manga::latest()->where('enabled', true)->paginate(5);
 
         return view('public.index', compact('mangas', 'title'));
     }
@@ -25,7 +25,7 @@ class MangaController extends Controller
     {
         $title = 'Admin';
         if (Auth::user()->isAdmin) {
-            $mangas = Manga::latest()->get();
+            $mangas = Manga::latest()->paginate(5);
             return view('admin.index', compact('mangas', 'title'));
         }
 
@@ -75,7 +75,7 @@ class MangaController extends Controller
         $manga = Manga::create($data);
 
         if ($manga) {
-            return redirect()->route('index');
+            return redirect()->route('manga');
         }
     }
 

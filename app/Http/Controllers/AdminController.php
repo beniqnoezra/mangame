@@ -13,4 +13,12 @@ class AdminController extends Controller
 
         return view('admin.index', compact('mangas'));
     }
+
+    public function home()
+    {
+        $mangas = Manga::latest()->get();
+        $title = 'Home';
+
+        return view('public.home', compact('mangas', 'title'));
+    }
 }

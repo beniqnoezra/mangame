@@ -29,17 +29,17 @@
                                         <td class="align-middle my-3 py-3">
                                             <img src="{{ asset('storage/' . $manga->image) }}" alt="" style="width: 70px">
                                         </td>
-                                        <td class="align-middle">{{ $manga->judul }}</td>
+                                        <td class="align-middle fw-bold">{{ $manga->judul }}</td>
                                         <td class="align-middle">
                                             @if ($manga->enabled)
-                                                <span class="badge bg-primary text-uppercase">&nbsp;<i class="bi bi-check-all"></i> active &nbsp;</span>
+                                                <span class="badge bg-success text-uppercase">&nbsp;<i class="bi bi-check-all"></i> active &nbsp;</span>
                                             @else
                                                 <span class="badge bg-warning text-uppercase"><i class="bi bi-hourglass-split"></i> waiting</span>
                                             @endif
                                         </td>
                                         <td class="align-middle">
                                             <div class="admin d-flex">
-                                                <a href="{{ route('manga.show', $manga->id) }}" class="btn btn-success me-3"><i class="bi bi-card-text"></i> Detail</a>
+                                                <a href="{{ route('manga.show', $manga->id) }}" class="btn btn-secondary me-3"><i class="bi bi-card-text"></i> Detail</a>
                                                 @if (!$manga->enabled)
                                                     <form action="{{ route('manga.change', $manga->id) }}" method="post">
                                                         @csrf
@@ -54,6 +54,9 @@
                         </table>
                     </div>
                 </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                {{ $mangas->links() }}
             </div>
         </div>
     </section>
